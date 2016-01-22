@@ -1,0 +1,94 @@
+/* ==========================================================================
+   header
+   ========================================================================== */
+
+.headlogo {
+	opacity: 1;
+	text-align: center;
+	height: 250px;
+	line-height: 200px;
+	background: #fefefe url(../img/blueprint.jpg) center center;
+	background-size: cover;
+	position: relative;
+	margin: 0;
+	font-size: 5vw;
+
+	@include breakpoint(baby) {
+	    display: none;
+	}
+	.background-mask {
+	  width: 100%;
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  z-index: 0;
+	  height: 100%;
+	  // background: rgba(255,255,255,0.5);
+	}
+	#logo { 
+	  position: relative;
+	  z-index: 1;
+	  margin: 20px 0;
+	  height: 160px;
+	  max-width: 90%;
+	  .st0 { fill: $hovercolor; }
+	  .st1 { fill: transparent; }
+	}
+}
+
+.head {
+  height: $headerheight;
+  position: relative;
+  top: -$headerheight;
+  width: 100%;
+  // background: #333;
+  @include background-image(linear-gradient(
+  	rgba(#333, .7), 
+  	rgba(#333, .8), 
+  	rgba(#333, .9),
+  	#333,
+  	#333)
+  );
+  text-align: center;
+  z-index: 2;
+  @include breakpoint(baby) {
+    text-align: right;
+    position: fixed;
+    top: 0;
+	@include background-image(linear-gradient(#333, #333));  
+  }
+	
+  &.fixed {
+	position: fixed;
+	top: 0;
+	@include background-image(linear-gradient(#333, #333, rgba(#333, .9), rgba(#333, .8), rgba(#333, .7)));
+  	@include breakpoint(baby) {
+		@include background-image(linear-gradient(#333, #333));  
+	}
+  	.logolink {
+  		display: inherit;
+  		top: 0;
+  	}
+  }
+
+  .logolink {
+  	position: relative;
+  	display: none;
+  	top: -100px;
+  	@include breakpoint(baby) {
+	  display: inherit;
+	  top: 0px;
+	}
+	#logo { 
+	    height: 40px;
+	    top: 4px;
+	    position: absolute;
+	    left: 10px;
+	    &:hover .st0 {
+	      fill: #ccc;
+	    }
+	    .st0 { fill: $hovercolor; }
+	    .st1 { fill: transparent; }
+	  }
+  }
+}

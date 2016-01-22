@@ -1,0 +1,40 @@
+/* ==========================================================================
+   MASTER-VARIABLES FILE
+   ========================================================================== */
+
+// ONLY VARIABLES GO IN HERE!  Always suffix them with !default so they don't get overwritten if importing more than once.
+// Example: $header-background-color: white !default;
+
+/**
+ * COLORS
+ */
+$white: #fff;
+$black: #000;
+$black50: rgb(127,127,127);
+$darkgrey: #333;
+$mediumgrey: #999;
+$lightgrey: #eee;
+
+$headerheight: 3rem;
+$bg: #fff;
+$hovercolor: #FB6C54;
+
+/**
+ * Base
+ */
+
+$text: $black !default;
+
+/**
+ * Sizes
+ */
+$headerheight: 50px;
+$footerheight: 160px;
+
+/**
+ * Breakpoint
+ */
+$breakpoint-papa: 1200px;
+$breakpoint-mama: 930px;
+$breakpoint-baby: 650px;
+$breakpoint-flunder: 600px;
